@@ -1,0 +1,83 @@
+.faq {
+    background: #171744;
+
+    &__title {
+        font-size: 26px;
+        font-weight: 700;
+        color: #fff;
+        margin: 20px 0 20px 0;
+        position: relative;
+
+        br {
+            display: none;
+        }
+    }
+
+    &__title-nth {
+        font-size: 18px!important;
+        margin: 30px 0 0 0;
+        color: #7F8BDD;
+        text-align: left;
+        line-height: 1.1;
+
+    }
+
+    &__sides {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__left {
+        max-width: 504px;
+        width: 100%;
+        margin: 0 auto;
+
+        img {
+            display: inline-block;
+            width: 100%;
+
+            @include support(object-fit, cover) {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__right {
+        max-width: 606px;
+    }
+
+
+    @include respond-from(md) {
+        padding-top: 100px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 635px;
+            height: 880px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 0;
+            background-image: url("/static/img/content/mars.svg");
+        }
+
+        &__sides {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__left {
+            margin: 0 40px 0 0;
+            z-index: 999;
+        }
+
+        &__title-nth {
+            margin: 0;
+        }
+    }
+}

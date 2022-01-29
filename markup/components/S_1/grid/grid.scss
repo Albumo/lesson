@@ -1,0 +1,131 @@
+.grid {
+    margin-top: -260px;
+    padding-top: 250px;
+    padding-bottom: 50px;
+    position: relative;
+
+    &:after {
+        background: #171744;
+        content: "";
+        z-index: -1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    &__wrap {
+        position: relative;
+
+    }
+
+    &__list {
+        @extend %ul-reset;
+        display: flex;
+        gap: 20px;
+        flex-flow: row wrap;
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: 700;
+        color: #fff;
+        margin: 20px auto;
+        text-align: left;
+        line-height: 1.1;
+
+        br {
+            display: none;
+        }
+    }
+
+    &__title-nth {
+        font-size: 18px !important;
+        margin: 0;
+        color: #7F8BDD;
+        text-align: left;
+        line-height: 1.1;
+    }
+
+    &__list-text {
+        position: absolute;
+        right: 0;
+        display: none;
+        left: 0;
+        padding: 10px;
+        color: #161616;
+        background: #fff;
+        transition: all .35s ease-in-out;
+    }
+
+    &__list-link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transition: all .35s ease-in-out;
+        max-width: 234px;
+        margin: 0 auto;
+        border-radius: 15px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            
+        }
+    }
+
+    &__btn {
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    @include respond-from(sm) {
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 28px;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__list {
+            margin: 40px 0 0 0;
+        }
+
+        &__btn {
+            margin-top: 40px;
+        }
+
+    }
+
+    @include respond-from(md) {
+        &__title {
+            font-size: 48px;
+        }
+
+        &__list {
+            margin: 80px 0 0 0;
+        }
+
+    }
+
+    @include respond-from(lg) {
+        &__list {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 128px;
+        }
+
+        &__title {
+            margin-bottom: 70px;
+        }
+
+        &__btn {
+            margin-top: 80px;
+        }
+    }
+
+}
