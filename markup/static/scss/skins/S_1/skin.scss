@@ -1,8 +1,8 @@
 body {
+    min-height: 100%;
     background-color: $primary-fill;
     font-weight: $font-weight;
     color: $primary-text;
-    min-height: 100%;
 }
 
 html {
@@ -66,17 +66,17 @@ html {
 }
 
 
-h1,h2,h3,h4,h5 {
+h1, h2, h3, h4, h5 {
     margin: 0;
     font-weight: 700;
     line-height: 1.2223;
 }
 
 p {
-    font-size: 14px;
-    color: #595959;
-    line-height: 1.7;
     margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #595959;
 }
 
 .main {
@@ -88,18 +88,19 @@ p {
 
 //sidebar styles
 .sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 20px 40px;
     background: #1E2939;
     color: #fff;
-    padding: 20px 20px 40px;
-    display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+
     &__image-wrap {
-        margin: 0 auto 36px;
-        max-width: 370px;
         width: 100%;
+        max-width: 370px;
+        margin: 0 auto 36px;
         overflow: hidden;
 
         img {
@@ -117,26 +118,26 @@ p {
 
     &__block-tech {
         .sidebar__block-list {
-            column-count: 2;
             gap: 10px;
+            column-count: 2;
         }
     }
 
     &__block-title {
-        font-size: 18px;
         margin-bottom: 8px;
+        font-size: 18px;
     }
 
-    &__block p{
-        color: #fff;
+    &__block p {
         font-weight: 700;
+        color: #fff;
 
         a {
+            padding-left: 10px;
             font-weight: 400;
             color: #fff;
-            opacity: .5;
-            padding-left: 10px;
             text-decoration: none;
+            opacity: .5;
 
             &:hover {
                 text-decoration: underline;
@@ -162,8 +163,8 @@ p {
         align-items: flex-start;
 
         &__image-wrap {
-            margin: 0 0 36px;
             max-width: 280px;
+            margin: 0 0 36px;
             border-radius: unset;
         }
 
@@ -179,13 +180,13 @@ p {
     padding: 40px 0;
 
     &__subtitle {
-        font-size: 14px;
         margin-bottom: 19px;
+        font-size: 14px;
     }
 
     &__title {
-        font-size: 32px;
         margin-bottom: 24px;
+        font-size: 32px;
 
     }
 }
@@ -195,8 +196,8 @@ p {
     margin-top: 20px;
 
     &__title {
-        font-size: 22px;
         margin-bottom: 8px;
+        font-size: 22px;
     }
 
     ol {
@@ -227,8 +228,8 @@ p {
 .work {
 
     &__title {
-        font-size: 22px;
         margin-bottom: 12px;
+        font-size: 22px;
     }
 
     &__company {
@@ -237,14 +238,14 @@ p {
     }
 
     ul {
+        max-width: 530px;
         margin: 8px 0 16px 0;
         padding: 0 0 0 20px;
         font-size: 14px;
-        max-width: 530px;
 
         li {
-            color: #595959;
             font-weight: 400;
+            color: #595959;
             text-decoration: none;
 
 
@@ -253,9 +254,9 @@ p {
     }
 
     p {
-        color: #A8A8A8;
-        font-size: 12px;
         margin-bottom: 10px;
+        font-size: 12px;
+        color: #A8A8A8;
     }
 }
 
@@ -264,23 +265,23 @@ p {
     margin-top: 43px;
 
     &__title {
-        font-size: 22px;
         margin-bottom: 12px;
+        font-size: 22px;
     }
 
     &__subtitle {
-        font-size: 14px;
         margin-bottom: 12px;
+        font-size: 14px;
 
         &:nth-child(3) {
-            font-size: 12px;
             margin-bottom: 0;
+            font-size: 12px;
         }
     }
 
     p {
-        color: #A8A8A8;
         font-size: 12px;
+        color: #A8A8A8;
     }
 
 
@@ -291,15 +292,15 @@ p {
     .main {
         flex-direction: row-reverse;
         align-items: stretch;
-        background: #F5F7FA;
         height: 100%;
         padding: 40px;
+        background: #F5F7FA;
     }
 
     .main-content {
-        background: #fff;
         padding: 102px 80px 107px;
-        box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        box-shadow: 6px 6px 20px rgba(0, 0, 0, .1);
     }
 
     //about styles
@@ -344,18 +345,19 @@ p {
 
     //sidbar styles
     .sidebar {
+        align-items: unset;
         max-width: 370px;
-        margin: 0;
         min-height: 100%;
-        box-sizing: border-box;
+        margin: 0;
         padding: 40px;
         background: #1E2939;
         color: #fff;
-        align-items: unset;
+        box-sizing: border-box;
+
         &__image-wrap {
-            margin: 0 -40px;
             width: 100%;
             min-width: 370px;
+            margin: 0 -40px;
             overflow: hidden;
         }
 
@@ -365,20 +367,20 @@ p {
         }
 
         &__block-title {
-            font-size: 22px;
             margin-bottom: 8px;
+            font-size: 22px;
         }
 
-        &__block p{
-            color: #fff;
+        &__block p {
             font-weight: 700;
+            color: #fff;
 
             a {
+                padding-left: 10px;
                 font-weight: 400;
                 color: #fff;
-                opacity: .5;
-                padding-left: 10px;
                 text-decoration: none;
+                opacity: .5;
 
                 &:hover {
                     text-decoration: underline;
@@ -401,10 +403,8 @@ p {
         }
 
     }
-
-
 }
 
 .colored {
-    color:#FB6D3A;
+    color: #FB6D3A;
 }
